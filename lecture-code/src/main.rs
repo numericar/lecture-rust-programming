@@ -2,8 +2,9 @@
 // mod lec_004_datatype;
 // mod lec_006_function;
 // mod lec_007_controlflow;
-mod lec_008_loop;
+// mod lec_008_loop;
+mod lec_009_ownership;
 
 fn main() {
-    lec_008_loop::process();
+    lec_009_ownership::process();
 }
