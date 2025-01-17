@@ -1,0 +1,22 @@
+Function
+    เป็นกลุ่มของชุดคำสั่งที่ถูกรวมไว้ด้วยกันเพื่อทำงานบางอย่าง โดยสามารถรับค่า input (parameter)
+    และส่งผลลัพธ์ออกมาได้ (return value) 
+
+    รูปแบบของชุดคำสั่ง
+        fn function_name(parameter: parameter_type) -> return_type {
+            statement
+
+            return value;
+        }
+
+    ** การตั้งชื่อฟังก์ชันจะต้องเป็น snack case เช่น get_user_by_email
+
+    ค่าที่จะ return สามารถระบุไว้ที่บรรทัดสุดท้ายของฟังก์ชันโดยไม่ต้องใส่ return, ;
+    เช่น 
+        fn add(a: i32, b: i32) -> i32 {
+            a + b
+        }
+
+    ** function ที่ไม่มีค่าส่งกลับ จะมี return type เป็น () อ่านว่า unit type เหมือนกับ void ใน c#
+
+    ** ใน rust จะไม่มีค่า null
