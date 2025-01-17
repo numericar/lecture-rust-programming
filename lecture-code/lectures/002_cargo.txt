@@ -1,0 +1,20 @@
+
+    Cargo
+        เป็นเครื่องมือ package manager และระบบ build สำหรับ rust 
+        โดยจัดการ dependencies และการทดสอบโปรแกรม
+        โดยมีข้อดีคือ
+            1. จัดการโครงการให้อัตโนมัติ
+            2. จัดการ dependencies ง่าย
+            3. build และ run code ในขั้นตอนเดียว
+            4. รองรับการทกสอบในตัว
+            5. จัดการเวอร์ชันของโปรเจคและ dependencies ได้ 
+
+        คำสั่ง
+            cargo new <project_name>
+            ใช้สำหรับสร้างโปคเจค
+
+            cargo run
+            รันโปรเจค rust
+
+            cargo install
+            ใช้สำหรับติดตั้ง dependencies เช่น cargo install cargo-watch
