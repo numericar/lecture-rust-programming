@@ -1,16 +1,16 @@
 Introduction to Rust
-    เป็นภาษาที่พัฒนาขึ้นโดย Mozilla เกิดขึ้นในปี 2006
-    
-    ภาษาคอมพิวเตอร์แบ่งออกเป็น 2 ชนิด คือ 
-        1.  Interpreter คือ จะต้องมี runtime คอยแปรภาษาทุกครั้งที่จะทำงาน เช่น nodejs, python, ruby
-            [source_code] ---> [runtime_interpreter] --<binary>--> [machine]
-            
-        2.  compiler คือ แปรง source code ทั้งหมดไปเป็นภาษาเครื่องอ่านได้
-            [source_code] ---> [compiler] ---> [execute_table_file]
+    เป็นภาษาที่พัฒนาขึ้นโดย Mozilla เกิดขึ้นในปี 2006 โดยจะเน้นไปที่ความปลอดภัยด้านหน่วยความจำ
+    และมีประสิทธิภาพสูง เหมาะสำหรับการเขียนโปรแกรมที่ต้องการจัดการกับหน่วจความจำแบบละเอียด เช่น 
+    embedded system, web assembly, native application
 
-    Rust ใช้ concept เดียวกันกับ cpp
-        - ไม่มี garbage collector
-        - zero-overhead principle
-
-    rustc 
-        จะเป็น compiler ของ rust
+    โดยฟังก์ชันหลักของ Rust มีดังนี้
+        1. Memory Safety
+                rust มีระบบการจัดการหน่วยความจำที่ปลอดภัยโดยใช้ ownership และ borrowing
+                เพื่อป้องกันปัญหาที่พบบ่อยในภาษาอื่น ๆ เช่น null pointer dereferencing
+        2. Zero-Cost Abstraction
+                rust สามารถใช้ Abstraction เช่น iterators, generics ได้ โดยไม่เสียประสิทธิภาพของการ
+                ทำงานลงไป โดยมันจะทำการแปรงให้มีประสิทธิภาพเทียบเท่ากับ low-level
+        3. Concurrency
+                rust มีการจัดที่ปลอดภัยจากปัญหาข้อมูลทับซ้อน (data race) โดยใช้ ownership system 
+                ทำให้ชุดคำสั่งเกี่ยวกับ multithreading มีความปลอดภัยจากการเข้าถึงข้อมูลพร้อมกัน
+        
