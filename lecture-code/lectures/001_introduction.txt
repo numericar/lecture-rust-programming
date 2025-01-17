@@ -1,0 +1,13 @@
+Introduction to Rust
+    เป็นภาษาที่พัฒนาขึ้นโดย Mozilla เกิดขึ้นในปี 2006
+    
+    ภาษาคอมพิวเตอร์แบ่งออกเป็น 2 ชนิด คือ 
+        1.  Interpreter คือ จะต้องมี runtime คอยแปรภาษาทุกครั้งที่จะทำงาน เช่น nodejs, python, ruby
+            [source_code] ---> [runtime_interpreter] --<binary>--> [machine]
+            
+        2.  compiler คือ แปรง source code ทั้งหมดไปเป็นภาษาเครื่องอ่านได้
+            [source_code] ---> [compiler] ---> [execute_table_file]
+
+    Rust ใช้ concept เดียวกันกับ cpp
+        - ไม่มี garbage collector
+        - zero-overhead principle
