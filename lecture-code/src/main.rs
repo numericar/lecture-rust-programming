@@ -1,5 +1,6 @@
-mod lec_003_variable;
+// mod lec_003_variable;
+mod lec_004_datatype;
 
 fn main() {
-    lec_003_variable::process();
+    lec_004_datatype::process();
 }
