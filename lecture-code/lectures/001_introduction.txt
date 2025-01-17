@@ -11,3 +11,6 @@ Introduction to Rust
     Rust ใช้ concept เดียวกันกับ cpp
         - ไม่มี garbage collector
         - zero-overhead principle
+
+    rustc 
+        จะเป็น compiler ของ rust
