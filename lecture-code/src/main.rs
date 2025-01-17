@@ -1,5 +1,5 @@
-mod lec_002_variable;
+mod lec_003_variable;
 
 fn main() {
-    lec_002_variable::process();
+    lec_003_variable::process();
 }
