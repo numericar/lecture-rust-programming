@@ -1,0 +1,52 @@
+Trait
+    เป็นเหมือนกับ interface ในภาษาอื่น ๆ โดยจะเป็นชุดของฟังก์ชันที่ชนิดข้อมูล (struct, enum) ต้องต้องการใช้งาน
+    trait จะต้องทำการ implement
+
+    ลักษณะเด่น ๆ ของ Trait
+        1. กำหนดพฤติกรรม: trait เป็นการอธิบายว่าประเภทควรจะสามารถทำอะไรได้บ้าง เช่น การคำนวน การเปรียบเทียบ
+        2. การใช้งานร่วมกับ generic: trait มักใช้ generic bound เพื่อบังคับว่าประเภทที่ใช้ ต้องมีพฤติกรรมตามที่กำหนด
+                ไว้ใน trait จึงจะสามารถใช้งานได้
+        3. การใช้งาน (implementation): ประเภทที่ต้องการพฤติกรรมของ trait จะต้อง implement function ใน trait
+
+    &self: เป็นการเรียกใช้งานของที่อยู่ในตัวเอง (เหมือนกับ this
+    
+
+    struct Person {
+        name: String
+    }
+
+    กำหนดว่าใครก็ตามที่ impl Greet จะต้องมีฟังก์ชันชื่อ say_hello
+    trait Greet {
+        fn say_hello(&self);
+    }
+
+    เป็นการบอกว่า Person กำลัง implement trait ชื่อ Greet โดยจะทำการเขียนการทำงานฟังก์ชัน say_hello
+    impl Greet for Person {
+        fn say_hello(&self) {
+            println!("Hello, my name is {}", self.name);
+        }
+    }
+
+    Trait Bound 
+        เป็นการกำหนดว่า generic type ที่นำมาใช้ จะต้อง implement Trait ที่ระบุ
+        โดยถูกใช้เพื่อป้องกันข้อผิดพลาดที่อาจเกิดจาก generic type ที่ไม่มีพฤติกรรมหรือฟังก์ชันตามที่ต้องการ
+
+        fn print_sum<T: Summable>(item: T) {
+            println!("The sum is: {}", item.sum());
+        }
+        จากชุดคำสั่งดังกล่าว ระบุว่า generic ที่จะส่งเข้ามา จะต้องทำการ implement trait Summable
+
+        โดยเราสามารถเพิ่ม trait ที่ generic จะต้อง impl ได้
+        fn conversation<T: Greet + Farewell>(item: T);
+
+        impl Greet for Person {
+            fn say_hello(&self) {
+                println!("Hello!");
+            }
+        }
+
+        impl Farewell for Person {
+            fn say_goodbye(&self) {
+                println!("Goodbye!");
+            }
+        }

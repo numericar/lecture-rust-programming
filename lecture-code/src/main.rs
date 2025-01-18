@@ -13,8 +13,9 @@
 // mod lec_017_collection;
 // mod lec_018_string;
 // mod lec_019_hash_map;
-mod lec_020_generic;
+// mod lec_020_generic;
+mod lec_021_trait;
 
 fn main() {
-    lec_020_generic::process();
+    lec_021_trait::process();
 }
