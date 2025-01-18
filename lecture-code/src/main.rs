@@ -12,8 +12,9 @@
 // mod lec_016_option;
 // mod lec_017_collection;
 // mod lec_018_string;
-mod lec_019_hash_map;
+// mod lec_019_hash_map;
+mod lec_020_generic;
 
 fn main() {
-    lec_019_hash_map::process();
+    lec_020_generic::process();
 }
