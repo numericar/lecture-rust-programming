@@ -1,0 +1,1 @@
+https://mikelopster.dev/posts/rust-basic-2
