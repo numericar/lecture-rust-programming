@@ -10,8 +10,9 @@
 // mod lec_013_enums;
 // mod lec_014_err_handling;
 // mod lec_016_option;
-mod lec_017_collection;
+// mod lec_017_collection;
+mod lec_018_string;
 
 fn main() {
-    lec_017_collection::process();
+    lec_018_string::process();
 }
