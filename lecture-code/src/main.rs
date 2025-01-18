@@ -6,8 +6,9 @@
 // mod lec_009_ownership;
 // mod lec_010_borrowing;
 // mod lec_011_reference;
-mod lec_012_struct;
+// mod lec_012_struct;
+mod lec_013_enums;
 
 fn main() {
-    lec_012_struct::process();
+    lec_013_enums::process();
 }
