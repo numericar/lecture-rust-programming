@@ -1,0 +1,10 @@
+HashMap
+    เป็นโครงสร้างข้อมูลที่จัดเก็บในรูปแบบ key-value โดยสามารถ ค้นหา, เพิ่ม, ลบได้
+    โดย hash map จะอยู่ใน standard library (std::collections::HashMap)
+    
+    ความสามารถ
+        1. Key-Value Pair: เก็บข้อมูลในรูปแบบคู่ (key, value)
+        2. Unique Key: key จะต้องไม่ซ้ำกันใน HashMap
+        3. Dynamic Size
+        4. Fast Lookup: ใช้เวลาค้หาใกล้เคียง O(1) ในกรณีทั่วไป
+        
