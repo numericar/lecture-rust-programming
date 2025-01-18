@@ -9,8 +9,9 @@
 // mod lec_012_struct;
 // mod lec_013_enums;
 // mod lec_014_err_handling;
-mod lec_016_option;
+// mod lec_016_option;
+mod lec_017_collection;
 
 fn main() {
-    lec_016_option::process();
+    lec_017_collection::process();
 }
