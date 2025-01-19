@@ -17,8 +17,9 @@
 // mod lec_021_trait;
 // mod lec_022_def_over;
 // mod lec_023_associated;
-mod lec_024_dynamic_dispatch;
+// mod lec_024_dynamic_dispatch;
+mod lec_025_standard_library;
 
 fn main() {
-    lec_024_dynamic_dispatch::process();
+    lec_025_standard_library::process();
 }
