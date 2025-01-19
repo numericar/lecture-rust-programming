@@ -1,0 +1,25 @@
+OOP
+    มองชุดคำสั่งแต่ละส่วนให้เป็นวัตถุ โดยวัตถุจะมี คุณสมบัติ (properties) และ พฤติกรรม (behavior)
+
+Class
+    เป็นแบบแปรนที่จะกำหนดว่า ของชิ้นนั้นมีคุณลักษณะอย่างไร มีพฤติกรรมอะไรบ้าง และพฤติกรรมนั้นทำงานอย่างไร
+
+เสาหลัก
+    - Encapsulation
+    - Abstraction
+    - Inheritance
+    - Polymorphism
+
+แต่ใน rust ไม่มี Inheritance แต่จะใช้ composition over Inheritance
+
+    Encapsulation
+        ซ่อนของสำคัญไว้ด้านใน เปิดเผิดเฉพาะสิ่งที่จะให้คนอื่นใช้งานได้
+
+    Abstraction
+        เป็นคลาสที่พฤติกรรมบางส่วนจะถูกเขียนไว้ให้ และบางส่วนให้ผู้สืบทอดเป็นผู้เขียนความสามารถเอง
+
+    Composition over Inheritance
+        ใช้งานหลาย struct แทนการสืบทอด
+
+    Polymorphism
+        

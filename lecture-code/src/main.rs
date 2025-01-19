@@ -23,13 +23,15 @@
 // mod lec_028_threading;
 // mod lec_029_channels;
 // mod lec_030_tokio;
+mod lec_036_oop;
 
 use tokio;
 use lecture_code::{potions, weapons};
 
 #[tokio::main]
 async fn main() {
-    potions::use_item();
-    weapons::use_item::use_item();
+    // potions::use_item();
+    // weapons::use_item::use_item();
+    lec_036_oop::process();
 }
 
