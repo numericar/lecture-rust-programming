@@ -18,8 +18,8 @@
 // mod lec_022_def_over;
 // mod lec_023_associated;
 // mod lec_024_dynamic_dispatch;
-mod lec_025_standard_library;
+mod lec_026_smart_pointer;
 
 fn main() {
-    lec_025_standard_library::process();
+    lec_026_smart_pointer::process();
 }

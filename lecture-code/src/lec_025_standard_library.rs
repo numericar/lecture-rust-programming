@@ -2,6 +2,7 @@ pub fn process() {
     statement_debug(10);
     statement_clone(String::from("Rust"));
     statement_partial_eq(20 , 10);
+    statment_ord(1, 2);
 }
 
 // ใช้ trait debug เพื่อแสดงค่าในรูปแบบของการ Debug (่ผ่าน "{:?}")
