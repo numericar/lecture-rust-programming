@@ -1,0 +1,50 @@
+Takio and Asynchronous
+    สามารถใช้ 1 thread แต่ว่าทำหลายอย่างพร้อมกันได้ผ่าน event loop ในการทำซ้ำงานใน thread จนกว่าจะหมด
+
+    Tokio ?
+        เป็น runtime ที่ทำให้ rust ทำงานแบบ Asynchronous Programming ได้
+
+    ตัวอย่าง
+        use tokio;
+
+        #[tokio::main] 
+        async fn main() {
+            tokio::spawn(async {
+                println!("A");
+            })
+            .await()
+            .unwrap();
+
+            tokio::spawn(async {
+                println!("B");
+            })
+            .await()
+            .unwrap();
+        }
+
+        หรือ
+
+         #[tokio::main] 
+        async fn main() {
+            let task_a = tokio::spawn(async {
+                println!("A");
+            });
+
+            let task_b = tokio::spawn(async {
+                println!("B");
+            });
+
+            let _ tokio::join!(task_a, task_b);
+        }
+
+    #[tokio::main] 
+    ปกติแล้วถ้าฟังก์ชันไหนจะมีการทำงานที่เป็น await จะตองมี async
+    แต่ main ควรเป็น synchronous
+
+        async fn hi_user() {
+            println!("Hello");
+        }
+
+        async fn main() {
+            let hello_task = tokio::spawn(hi_user());
+        }

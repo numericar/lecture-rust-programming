@@ -20,8 +20,13 @@
 // mod lec_024_dynamic_dispatch;
 // mod lec_026_smart_pointer;
 // mod lec_027_lifetime;
-mod lec_028_threading;
+// mod lec_028_threading;
+// mod lec_029_channels;
+mod lec_030_tokio;
 
-fn main() {
-    lec_028_threading::process();
+use tokio;
+
+#[tokio::main]
+async fn main() {
+    lec_030_tokio::process().await;
 }
