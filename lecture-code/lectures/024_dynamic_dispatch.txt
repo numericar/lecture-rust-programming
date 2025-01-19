@@ -23,4 +23,8 @@ Dynamic Dispatch
             trait object ควรไปเรียกฟังก์ชันตัวไหนในหน่วยความจำ
 
 
+    แตกต่างจาก static dispatch อย่างไร ?
+        1.  static dispatch การที่ rust จะรู้ว่าจะต้องเรียกใช้ฟังก์ชันอะไรจะเกิดขึ้นในช่วง compile time
+            แต่ dynamic dispatch เกิดขึ้นตอน runtime 
+        2.  ยืดหยุ่นกว่า เพราะสามารถทำงานกับชนิดข้อมูลที่ไม่รู็ล่วงหน้าได้
     
