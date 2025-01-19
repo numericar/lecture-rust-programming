@@ -22,11 +22,14 @@
 // mod lec_027_lifetime;
 // mod lec_028_threading;
 // mod lec_029_channels;
-mod lec_030_tokio;
+// mod lec_030_tokio;
 
 use tokio;
+use lecture_code::{potions, weapons};
 
 #[tokio::main]
 async fn main() {
-    lec_030_tokio::process().await;
+    potions::use_item();
+    weapons::use_item::use_item();
 }
+

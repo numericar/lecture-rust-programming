@@ -1,0 +1,23 @@
+Module & Crates
+    การจัดการกับโครงสร้างโปรเจค
+
+    1.  สร้าง module โดยใช้ keyword mod ที่ไฟล์แยก
+        ตัวอย่าง
+            pub mod calculator {
+                pub fn add(a: i32, b: i32) -> i32 {
+                    a + b
+                }
+            }
+
+    2. สร้าง lib.rs ขึ้นมา โดยจะต้องใช้ชื่อนี้เท่านั้นเพราะ rust จะเข้าใจว่ามันคือศูนย์รวมของ modules
+
+    3. ประกาศ public module ที่ต้องการ โดยชื่อจะต้องตรงกัน -> pub mod calculator;
+
+    3. เรียกใช้งาน โดยสามารถเรียกใช้งานได้ use project_name::calculator
+
+    :: มีความหมายเดียวกันกับ / เปรียบเสมือนการเข้าถึง path โดย root คือ src
+    project_name::calculator = project_name/calculator
+
+    crate จะหมายถึง root โดย crate::calculator::add:;add; จะหมายถึง src/calculator/add/add
+
+    super หมายถึง root ในระดับ module
