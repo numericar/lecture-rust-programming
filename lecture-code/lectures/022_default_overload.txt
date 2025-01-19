@@ -1,0 +1,5 @@
+Default & Overload
+    Trait สามารถกำหนด default implement ให้กับ method ได้ ซึ่ง generic type ที่ implement Trait จะใช้งาน
+    ได้ทันที
+
+    โดยเราสามารถ override คำสั่ง default ได้ใน impl

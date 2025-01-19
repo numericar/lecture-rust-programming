@@ -14,8 +14,9 @@
 // mod lec_018_string;
 // mod lec_019_hash_map;
 // mod lec_020_generic;
-mod lec_021_trait;
+// mod lec_021_trait;
+mod lec_022_def_over;
 
 fn main() {
-    lec_021_trait::process();
+    lec_022_def_over::process();
 }
