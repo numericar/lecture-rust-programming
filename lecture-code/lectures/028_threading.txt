@@ -1,0 +1,83 @@
+Multi-Threading
+    เป็นการทำหลาย ๆ อย่างที่แตกต่างกัน ในเวลาเดียวกัน
+
+    Synchronouse
+        เป็นการทำงานทีละลำดับขั้นตอน ต้องรอให้ฟังก์ชันที่กำลังทำงานอยู่ทำงานให้เสร็จ จึงจะทำงานต่อได้
+    Multi-Threading
+        เป็นการทำงานหลาย ๆ งานพร้อมกัน ในเวลาเดียวกัน
+
+    Rust 
+        จะใช้ thread จริงแบบ 1:1 โดย rust จะมี thread build-in ให้แล้ว
+
+    ตัวอยางชุดคำสั่ง
+        use std::thread;
+
+        fn main() {
+            let threaded = thread::spawn(|| {
+                println("Crabby is cooking a potion!");
+            });
+        }
+
+    โดยจากคำสั่งดังกล่าว จะมี 2 thread ที่สร้างขึ้น 
+        1. thread ของ main 
+        2. thread จากการใช้คำสั่ง spawn
+    โดยเมื่อ main ทำงานเสร็จ มันจะหยุดการทำงานทันที ทำให้ thread ที่เราสร้างไว้ด้วยคำสั่งที่เกิดจากการทำงานของ main จะถูกทำลายไปด้วย
+    แม้ว่าจะยังไม่เสร็จก็ตาม
+
+    โดยถ้าเราต้องการให้รอ thread ทำงานให้เสร็จ จะต้องใช้คำสั่ง .join() เข้ามาช่วย
+        threaded.join().unwarp();
+
+    Smart Pointer
+        Arc (std::sync::Arc)
+            เป็น smart pointer อีกหนึ่งตัว ในกรณีที่เราต้องการให้มันมีหลาย owner แบบข้าม thread
+            คล้ายกับ Rc แต่ Rc ใช้งานข้าม thread ไม่ได้
+
+            ตัวอยางชุดคำสั่ง
+
+            let treasure = Arc::new("Golden Sword");
+
+            let thread_1 = thread::spawn({
+                let treasure_clone = Arc::clone(&treasure);
+
+                move || {
+                    println!("Crabby's clone found: {}", treasure_clone);
+                }
+            });
+
+            let thread_2 = thread::spawn({
+                let treasure_clone = Arc::clone(&treasure);
+
+                move || {
+                    println!("Crabby's clone found: {}", treasure_clone);
+                }
+            })
+
+    move:   เป็น safety feature ของ rust ในกรณีที่เรามีการส่งตัวแปรระดับ global เข้าไปทำงานใน thread, เราจะต้องยืนยันว่า ค่าที่ส่งเข้าไปนั้น
+            จะให้ thread นั้นเป็น owner ไปเลย
+    
+    Mutex:  เหมือนกับ RefCell แต่ว่า mutex สามารถใช้งานแบบข้าม thread ได้ โดย mutex จะคอยป้องกันการเปลี่ยนค่าที่ซ้ำซ้อนกัน โดนจะล็อคให้ thread
+            ที่ได้รับอนุญาติให้เปลี่ยนค่าก่อน thread อืนจึงจะสามารถเปลี่ยนได้
+    
+    ตัวอย่าง 
+        let gold_coin = Arc::new(Mutex::new(100));
+
+        let loot_1 thread::spawn({
+            let gold_coin = Arc::clone(&gold_coin);
+
+            move || {
+                let mut loot = gold_coin.lock().unwarp();
+                *loot += 20;
+            }
+        });
+
+        let loot_2 thread::spawn({
+            let gold_coin = Arc::clone(&gold_coin);
+
+            move || {
+                let mut loot = gold_coin.lock().unwarp();
+                *loot += 100;
+            }
+        });
+
+    .lock()     เป็นการบอกให้ mutex ทำการล็อคไว้ก่อนไม่ให้เทรดอื่นสามารถเปลี่ยนแปลงได้จนกว่ามันจะทำงานเสร็จ
+    .unwarp()   ดึง reference

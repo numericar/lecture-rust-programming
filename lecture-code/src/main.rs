@@ -18,8 +18,10 @@
 // mod lec_022_def_over;
 // mod lec_023_associated;
 // mod lec_024_dynamic_dispatch;
-mod lec_026_smart_pointer;
+// mod lec_026_smart_pointer;
+// mod lec_027_lifetime;
+mod lec_028_threading;
 
 fn main() {
-    lec_026_smart_pointer::process();
+    lec_028_threading::process();
 }
