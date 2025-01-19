@@ -16,8 +16,9 @@
 // mod lec_020_generic;
 // mod lec_021_trait;
 // mod lec_022_def_over;
-mod lec_023_associated;
+// mod lec_023_associated;
+mod lec_024_dynamic_dispatch;
 
 fn main() {
-    lec_023_associated::process();
+    lec_024_dynamic_dispatch::process();
 }
