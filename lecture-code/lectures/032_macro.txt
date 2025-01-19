@@ -1,0 +1,15 @@
+Macro
+    คล้ายกับฟังก์ชัน แต่เราสามารถเขียน parttern เพื่อเรียกใช้มันได้เรื่อย ๆ
+    ตัวอย่าง macro คือ 
+        #[derive(debug)]
+        struct Item {
+            name: String,
+            price: f64
+        }
+
+    โดยจะมีอยู่ 2 ชนิดหลัก ๆ คือ 
+        1. macro_rules:         basic macro ทั่วไป
+        2. procedural macro     สามารถ custom ได้เยอะกว่า
+
+    ** parameter ใน macro จะต้องประกาศ $ ไว้เสมอ
+    ** expr เป็นชนิดของข้อมูลในมาโคร
