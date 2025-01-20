@@ -15,3 +15,10 @@ Entity vs Value Object
 Ubiquitous Language
     เป็นหลักการตั้งชื่อสิ่งต่าง ๆ ในระบบของเรา
     ควรจะใช้คำซัพเดียวกันทั้งระบบ
+
+Bounded Context
+    จัด requirement ให้เป็นหมวดหมู่
+
+โดยถ้าเราทำทุกอย่างแล้ว เราจะได้ business domain ออกมา
+แต่เราจะขาด technical domain เพราะการมีแค่ business domain จะทำให้โปรแกรมไม่สามารถทำงานได้
+เช่น การ authentication
