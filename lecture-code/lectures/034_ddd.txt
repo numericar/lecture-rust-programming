@@ -1,0 +1,13 @@
+Domain-Driven Design
+    เป็นวิธีการออกแบบระบบรูปแบบหนึ่ง มุ่งเน้นไปที่ business domain
+    ถูกออกแบบขึ้นโดย Eric Evans
+
+    ** เราจะต้องเคลียร์ requirement ให้แตกก่อน ค่อยทำขึ้นตอนอื่น
+
+Entity vs Value Object
+    Entity (database)
+        - สามารถเปลี่ยนแปรงได้ตามการเวลา
+        - มีความเป็นเอกลักษณ์ในตัวเอง
+        - สามารถติดตามไปได้เรื่อย ๆ แม้จะเปลี่ยนแปลงไป
+
+    Value Object (fix code, config file)
