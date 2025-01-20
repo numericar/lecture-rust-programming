@@ -11,3 +11,7 @@ Entity vs Value Object
         - สามารถติดตามไปได้เรื่อย ๆ แม้จะเปลี่ยนแปลงไป
 
     Value Object (fix code, config file)
+
+Ubiquitous Language
+    เป็นหลักการตั้งชื่อสิ่งต่าง ๆ ในระบบของเรา
+    ควรจะใช้คำซัพเดียวกันทั้งระบบ
