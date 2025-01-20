@@ -1,0 +1,16 @@
+Clean Architecture
+    - ดูแลรักษาง่าย
+    - ทดสอบง่าย
+    - เพิ่มความสามารถได้ง่าย
+
+    โดยมันเป็นสถาปัตยกรรมหนึ่งในการวางโปรเจค
+    โดยแนวคิดคือการแบ่ง layer ของชุดคำสั่งออกจากกัน โดย
+        1. Domain Layer: จัดเก็บ business logic
+        2. Application Layer: เป็นชั้นที่เราจะทำ business logic ต่าง ๆ มาประกอบเพื่อใช้ด้วยกัน
+        3. Infrastructure Layer: เอาไว้เก็บอะไรก็ตามที่ไม่ได้เกี่ยวกับ core business logic เช่น database, http serv
+
+    โดยเรียงลำดับ
+        [Infrastructure] <---> [Application] <---> [Domain]
+    แต่การทำแบบนี้ จะทำให้ยากต่อการบำรุงรักษา เราจะนำหลักการ solid มาใช้ 
+        [Infrastructure] <--[traits]--> [Application] <--[traits]--> [Domain]
+
